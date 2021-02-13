@@ -1,0 +1,28 @@
+1) créer un virtuelenv : python3 -m venv venv (2eme venv = nom du venv)
+2) activer le venv : source venv/bin/activate
+3) pip3 install django 
+4) installer django en --save : django-admin startproject library  (library = nom projet)
+
+5) cd library
+
+6) python3 manage.py runserver : lancer le server
+6 bis) python3 manage.py runserver 8032 : lancer le server sur le port 8032
+7) python3 manage.py startapp polls : créer un view polls
+
+Database migration (comme avec doctrine et symfony, on définit la table)
+8) dans models.py de la view : mettre les caractéristiques
+9) dans settings.py du projet ajouter :   'polls.apps.PollsConfig' dans INSTALLED_APPS = []
+10) python manage.py migrate
+11) python manage.py makemigrations polls : comme dump de doctrine
+12) python manage.py sqlmigrate polls 0001 : création des tables polls
+13) python manage.py shell : on entre dans le shell pour remplir nos tables/créer des lignes    ===>  https://docs.djangoproject.com/en/2.2/intro/tutorial02/
+
+
+python3 --version
+which python3
+python3 -m django --version
+
+
+pip = modules/dépendances
+django = framework
+manage.py = index.html
